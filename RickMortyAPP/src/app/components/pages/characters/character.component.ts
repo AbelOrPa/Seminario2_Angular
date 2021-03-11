@@ -29,5 +29,5 @@ import { Character } from "./../../../shared/interfaces/character.interface"
 })
 
 export class CharacterComponent{
-    @Input() character:Character | undefined;
+    @Input()character: Character;
 }
