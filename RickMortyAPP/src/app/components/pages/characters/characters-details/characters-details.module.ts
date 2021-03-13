@@ -10,6 +10,6 @@ import { CharactersDetailsRoutingModule } from './characters-details-routing.mod
   imports: [
     CommonModule,
     CharactersDetailsRoutingModule
-  ]
+  ],
 })
 export class CharactersDetailsModule { }

@@ -28,6 +28,6 @@ import { Character } from "./../../../shared/interfaces/character.interface"
     changeDetection:ChangeDetectionStrategy.OnPush
 })
 
-export class CharacterComponent{
-    @Input()character: Character;
+export class CharacterComponent {
+    @Input() character!: Character;
 }

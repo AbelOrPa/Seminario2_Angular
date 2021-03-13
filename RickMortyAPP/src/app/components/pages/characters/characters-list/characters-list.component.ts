@@ -23,17 +23,17 @@ export class CharactersListComponent implements OnInit {
   };
   showGoUpButton = false;
   private pageNum = 1;
-  private query: string = "";
+  private query: string ="";
   private hideScrollHeight = 200;
   private showScrollHeight = 500;
 
 
   constructor(
-  @Inject(DOCUMENT) private document: Document,
-  private characterSvc: CharacterService,
-  private route: ActivatedRoute,
-  private router: Router) { 
-    this.onUrlChanged();
+    @Inject(DOCUMENT) private document: Document,
+    private characterSvc: CharacterService,
+    private route: ActivatedRoute,
+    private router: Router) { 
+      this.onUrlChanged();
   }
 
   ngOnInit(): void {
@@ -69,22 +69,18 @@ export class CharactersListComponent implements OnInit {
     this.document.documentElement.scrollTop=0;
   }
 
-  private onUrlChanged():void{
-
-    this.router.events.pipe(
-      filter((event) => event instanceof NavigationEnd)).subscribe(
-        () => {
-          this.characters = [];
-          this.pageNum = 1;
-          this.getCharactersByQuery()
-        }
-      );
-
+  private onUrlChanged(): void {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.characters = [];
+        this.pageNum = 1;
+        this.getCharactersByQuery();
+      });
   }
 
   private getCharactersByQuery(): void {
-    this.route.queryParams.pipe(take(1)).subscribe((params: ParamMap) => {
-      this.query = params['q'];
+    this.route.queryParams.pipe(take(1)).subscribe((params) => { this.query = params['q'] ;
       this.getDataFromService();
     });
   }
