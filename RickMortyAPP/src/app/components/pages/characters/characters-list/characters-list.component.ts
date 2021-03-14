@@ -2,7 +2,7 @@ import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { Character } from "./../../../../shared/interfaces/character.interface";
 import { CharacterService } from "./../../../../shared/services/character.service";
 import { filter, take } from "rxjs/operators"
-import { ActivatedRoute, NavigationEnd, ParamMap, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common'
 
 
