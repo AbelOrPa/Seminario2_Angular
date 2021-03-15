@@ -4,6 +4,7 @@ import { CharacterService } from "./../../../../shared/services/character.servic
 import { filter, take } from "rxjs/operators"
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common'
+import { ReactiveFormComponent } from "src/app/components/pages/reactive-form/reactive-form.component"
 
 
 type RequestInfo={
@@ -18,6 +19,8 @@ type RequestInfo={
 export class CharactersListComponent implements OnInit {
 
   characters:Character[] = [];
+  charactersDef: Character[]=[];
+  
   info: RequestInfo = {
     next: "",
   };
@@ -94,6 +97,7 @@ export class CharactersListComponent implements OnInit {
 
         const {info , results} = res;
         this.characters = [...this.characters, ...results]
+        this.charactersDef=this.characters.concat(ReactiveFormComponent.charactersList)
         this.info = info;
       } else{
 
@@ -101,5 +105,9 @@ export class CharactersListComponent implements OnInit {
       }
       
     })
+  }
+  showMyCharacters():void{
+    this.characters=[];
+    this.charactersDef=this.characters.concat(ReactiveFormComponent.charactersList);
   }
 }
