@@ -1,0 +1,13 @@
+<div class="row justify-content-center margin-top:100px justify-content-center">
+<label for="name">Name:</label>
+<input #name type="text" id="name" name="name">
+</div>
+<div class="row justify-content-center margin-top:100px justify-content-center">
+ <label for="gender">Gender:</label>
+ <input #gender type="text" id="gender" name="gender">
+</div>
+<div class="row justify-content-center">
+    <button (click)="onSubmit(name.value, gender.value)">
+        Submit
+    </button>
+</div>

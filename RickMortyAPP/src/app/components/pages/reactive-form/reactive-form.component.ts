@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from "./../../../shared/interfaces/character.interface";
 
+
 @Component({
   selector: 'app-reactive-form',
   templateUrl: './reactive-form.component.html',
@@ -13,5 +14,9 @@ export class ReactiveFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onSubmit(nameValue:string, genderValue:string):void{
+    let character :Character;
+    character={name:nameValue, gender:genderValue, id:Math.random(), image:"", species:"", created:new Date().toString(), status:"" };
+  
+  }
 }
