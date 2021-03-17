@@ -7,12 +7,13 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FormSearchComponent } from './shared/components/form-search/form-search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FormSearchComponent,
+    FormSearchComponent
     
   ],
   imports: [

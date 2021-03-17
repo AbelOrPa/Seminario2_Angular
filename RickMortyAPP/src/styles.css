@@ -48,5 +48,17 @@ img:hover {
     right: 10px;
     visibility: visible;
 }
+.no-hidden-hola{
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    visibility: visible;
+}
+.no-hidden-loquequieras{
+    position: fixed;
+    bottom: 75px;
+    right: 10px;
+    visibility: visible;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
