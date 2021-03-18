@@ -113,5 +113,6 @@ export class CharactersListComponent implements OnInit {
   private getDataFromService2():void{
     this.characterSvc.getDetails(1).subscribe(res=>{console.log(res)});
   }
+  
  
 }
