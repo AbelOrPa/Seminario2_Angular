@@ -15,10 +15,25 @@
     </div>
     </form>-->
     <form [formGroup]="jesucristo" (ngSubmit)="submit()">
-        Nombre:<input #name formControlName="name" name="name" id="name" type="text" placeholder="Name" required><br>
-        <input #gender formControlName="gender" id="gender" name="gender" type="text" placeholder="Gender" required>
-        <button  (click)="onSubmit(name.value, gender.value)">
-            Submit
-        </button>
+        <div class="row justify-content-center ">
+            <p style="font-size: 30px;">
+                Nombre:
+                <input #name formControlName="name" name="name" id="name" type="text" placeholder="Name" required style="margin-top: 30px;"><br>
+                
+            </p>
+        </div>
+        <div class="row justify-content-center">
+            <p style="font-size: 30px;">
+                Gender:
+                <input #gender formControlName="gender" id="gender" name="gender" type="text" placeholder="Gender" required>
+            </p>
+        </div>
+        <div class="row justify-content-center ">
+            <button  (click)="onSubmit(name.value, gender.value)" style="font-size: 30px; size: 40px;">
+                Submit
+            </button>
+        </div>
+            
+        
     </form>
     
